@@ -75,6 +75,7 @@ class Game(arcade.Window):
 def main():
     game = Game()
     game.setup()
+    print('test')
     arcade.run()
 
 
