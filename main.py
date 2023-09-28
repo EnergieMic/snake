@@ -14,10 +14,11 @@ class Game(arcade.Window):
         self.direction = [0, -1]
         self.direction_chosen = False
         self.show_lines = False
+        self.start_length = 3
 
     def setup(self):
-        for i in range(3):
-            self.snake_position.append([self.start_postion[0], self.start_postion[1]+3-i])
+        for i in range(self.start_length):
+            self.snake_position.append([self.start_postion[0], self.start_postion[1]+self.start_length-i])
         self.snake_position.append(self.start_postion)
         arcade.schedule(self.move, 0.5)
 
